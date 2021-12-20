@@ -1,0 +1,38 @@
+What is HTTP?
+    Hypertext Transfer Protocol - the protocol (set of rules) that says how a server and web browser should communicate (for standard web)
+
+What is a URL?
+    Universal Resource Locator - text that specificies where a resource can be found on the internet
+
+What is DNS?
+    Domain Name System - Takes the hostname and turns it into the corresponding IP address (like a phonebook for the web)
+
+What is a query string?
+    Part of the URL that assigns specified parameters - A way of specifying extra information based on that URL, such as search terms, info from forms, etc.
+
+What are two HTTP verbs and how are they different?
+    GET - requests from the server without any side effects. Works with entering URLs in browsers, clicking links, and some form submissions. Arguments are sent in the query string of the request
+
+    POST - requests from the server with side effects. Works with things like some form submissions, charging credit cards, sending email. Arguments are sent as the body of the request.
+
+What is an HTTP request?
+    A request made by a user (client) to a named host on a server, to access a resource on that server
+
+What is an HTTP response?
+    Provides the user (client) with the resource it requested from the server
+
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+    Used in an HTTP request and respnse to specify more detailed information/context, but that doesn't relate to the content:
+        date: current date and time of the request
+        last-modified: date and time the resource was modified
+        method: get, post, delete, etc
+        Accept-Language: en or en-US
+
+What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+    -The browser turns “site.com” into it's corresponding IP address using DNS
+    -The browser connects to the ip address and makes a request
+    -The server sends a response back to the browser (usually HTML with a status code)
+    -The browser creates a DOM from the HTML and scans the HTML for additional resources it needs to -request (images, css styling, JS, etc)
+    -The browser makes separate requests for each additional resource it needs for the HTML
+    -The server sends a separate response for each request
+    
